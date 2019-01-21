@@ -1,0 +1,132 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>list示例</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>基本列表</p>
+  <ion-list>
+    <ion-item>Tom</ion-item>
+    <ion-item>Jerry</ion-item>
+  </ion-list>
+
+  <p>按钮作为列表项</p>
+  <ion-list>
+    <button ion-item>Tom</button>
+    <button ion-item>Jerry</button>
+  </ion-list>
+  <p>列表边距</p>
+  <ion-list inset>
+    <ion-item>Tom</ion-item>
+    <ion-item>Jerry</ion-item>
+  </ion-list>
+  <p>无分割线列表</p>
+  <ion-list no-lines>
+    <ion-item>Tom</ion-item>
+    <ion-item>Jerry</ion-item>
+  </ion-list>
+  <p>列表分隔项</p>
+  <ion-item-group>
+    <ion-item-divider>Students</ion-item-divider>
+    <ion-item>Tom</ion-item>
+    <ion-item>Jerry</ion-item>
+    <ion-item-divider>Teachers</ion-item-divider>
+    <ion-item>Tom's teachers</ion-item>
+    <ion-item>Jerry's teachers</ion-item>
+  </ion-item-group>
+  <p>列表头部</p>
+  <ion-list>
+    <ion-list-header>Students</ion-list-header>
+    <ion-item>Tom</ion-item>
+    <ion-item>Jerry</ion-item>
+  </ion-list>
+  <!--HTML CSS Zen Coding-->
+<!--ion-list>ion-list-header+ion-item*2-->
+  <p>图标作为列表项</p>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="heart" item-start color="danger"></ion-icon>
+      Tom
+    </ion-item>
+    <ion-item>
+      <ion-icon name="heart" item-end color="danger"></ion-icon>
+      Jerry</ion-item>
+  </ion-list>
+  <p>头像作为列表项</p>
+  <ion-list>
+    <ion-item>
+
+      <ion-avatar item-start>
+        <img src="assets/avatars/test.png">
+      </ion-avatar>
+      <h2>Tom</h2>
+      <p>Tom is a student</p>
+    </ion-item>
+    <ion-item>
+      <ion-avatar item-end>
+        <img src="assets/avatars/test.png" >
+      </ion-avatar>
+      <h2>Jerry</h2>
+      <p>The world is your oyster</p>
+    </ion-item>
+  </ion-list>
+  
+  <p>滑动列表项</p>
+  <!--滑动列表项放在ion-item-sliding里面，-->
+  <!--直接显示的放在ion-item，滑动后显示的-->
+  <!--放在ion-item-options里面-->
+  <ion-list>
+    <ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/avatars/test.png" alt="">
+      </ion-avatar>
+      <h2>Tom</h2>
+      <p>practice makes perfect</p>
+    </ion-item>
+    <ion-item-options>
+      <button ion-button icon-start color="light">
+        <ion-icon name="more"></ion-icon>
+        More
+      </button>
+      <button ion-button icon-start color="light">
+        <ion-icon name="heart" color="danger"></ion-icon>
+        Love
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/avatars/test.png" alt="">
+        </ion-avatar>
+        <h2>Tom</h2>
+        <p>practice makes perfect</p>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button icon-start color="light">
+          <ion-icon name="more"></ion-icon>
+          More
+        </button>
+        <button ion-button icon-start color="light">
+          <ion-icon name="heart" color="danger"></ion-icon>
+          Love
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <p>数据来自控制器</p>
+  <ion-list *ngFor="let course of courses" (click)="selectCourse(course)" no-lines>
+    <button ion-item >{{course}}</button>
+  </ion-list>
+</ion-content>
